@@ -19,7 +19,7 @@ var hasCycle = function(head) {
     return false
 };
 
-// MAKING LINKED LIST HERE
+// Making linked list here
 class ListNode {
     constructor(val) {
         this.val = val
