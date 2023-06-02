@@ -8,20 +8,6 @@
 // You must write an algorithm that runs in O(log n) time.
 
 var findMin = function (nums) {
-    let left = nums[0]
-    let right = nums[nums.length - 1]
-    let mid = nums[Math.floor(nums.length / 2)]
-
-    while (left > right) {
-        left = mid
-        console.log(nums.slice(Math.floor(nums.length / 2)), Math.ceil(nums.length / 2))
-        mid = nums.slice(Math.floor(nums.length / 2))[Math.ceil(nums.length / 2)]
-    }
-
-    return left
-};
-
-var findMin = function (nums) {
     let [left, right] = [0, nums.length - 1];
 
     while (left < right) {
@@ -29,17 +15,13 @@ var findMin = function (nums) {
         const guess = nums[mid];
         const [leftNum, rightNum] = [nums[left], nums[right]];
 
-        const isTarget = leftNum < rightNum;
-        if (isTarget) return leftNum;
+        if (leftNum < rightNum) return leftNum;
 
-        const isTargetGreater = leftNum <= guess;
-        if (isTargetGreater) left = mid + 1;
-
-        const isTargetLess = guess < leftNum;
-        if (isTargetLess) right = mid;
-    }
+        if (leftNum <= guess) left = mid + 1;
+        if (guess < leftNum) right = mid;
+    };
 
     return nums[left];
 };
 
-console.log(findMin[3, 4, 5, 1, 2])
+console.log(findMin([3,4,5,1,2]))

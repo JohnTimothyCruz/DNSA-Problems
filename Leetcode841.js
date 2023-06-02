@@ -9,19 +9,19 @@ var canVisitAllRooms = function(rooms) {
     let roomKeys = [0];
 
     while (roomKeys.length) {
-        let currRoom = roomKeys.pop()
+        let currRoom = roomKeys.pop();
 
         if (!visited.includes(currRoom)) {
-            visited.push(currRoom)
+            visited.push(currRoom);
             for (const key of rooms[currRoom]) {
                 if (!visited.includes(key) && !roomKeys.includes(key)) {
-                    roomKeys.push(key)
-                }
-            }
-        }
+                    roomKeys.push(key);
+                };
+            };
+        };
     };
 
-    return visited.length === rooms.length
+    return visited.length === rooms.length;
 };
 
-console.log(canVisitAllRooms([[1, 3], [3, 0, 1], [2], [0]]))
+console.log(canVisitAllRooms([[1, 3], [3, 0, 1], [2], [0]]));

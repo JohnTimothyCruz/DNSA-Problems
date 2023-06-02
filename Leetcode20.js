@@ -7,22 +7,21 @@
 // Every close bracket has a corresponding open bracket of the same type.
 
 var isValid = function(s) {
-    const opens = "([{"
-    const valids = ['()', '[]', '{}']
-
-    const opensList = []
+    const opens = "([{";
+    const valids = ['()', '[]', '{}'];
+    const opensList = [];
 
     for (const char of s) {
         if (opens.includes(char)) {
-            opensList.push(char)
+            opensList.push(char);
         } else {
-            if (!opensList[0] || !valids.includes(opensList[opensList.length - 1] + char)) return false
-            opensList.pop()
-        }
-    }
+            if (!opensList[0] || !valids.includes(opensList[opensList.length - 1] + char)) return false;
+            opensList.pop();
+        };
+    };
 
-    if (opensList.length) return false
-    return true
+    if (opensList.length) return false;
+    return true;
 };
 
-console.log(isValid('([{}])'))
+console.log(isValid('([{}])'));

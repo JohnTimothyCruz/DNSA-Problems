@@ -10,4 +10,4 @@ var isPalindrome = function(x) {
     return num.join('') === numRev.join('');
 };
 
-console.log(isPalindrome(121))
+console.log(isPalindrome(121));

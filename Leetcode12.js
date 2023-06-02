@@ -15,12 +15,12 @@ var intToRoman = function(num) {
 
     for (let i = 0; i < numbers.length; i++) {
         while (num % numbers[i] !== num) {
-            num -= numbers[i]
-            res += roman[i]
-        }
-    }
+            num -= numbers[i];
+            res += roman[i];
+        };
+    };
 
-    return res
+    return res;
 };
 
-console.log(intToRoman(1994))
+console.log(intToRoman(1994));

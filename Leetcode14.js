@@ -4,16 +4,16 @@
 // If there is no common prefix, return an empty string "".
 
 var longestCommonPrefix = function(strs) {
-    let prefix = strs[0]
+    let prefix = strs[0];
 
     for (let string of strs) {
         while (prefix !== string.slice(0, prefix.length)) {
-            prefix = prefix.slice(0, -1)
-            if (prefix === '') return ''
-        }
-    }
+            prefix = prefix.slice(0, -1);
+            if (prefix === '') return '';
+        };
+    };
 
-    return prefix
+    return prefix;
 };
 
-console.log(longestCommonPrefix(['flower', 'flow', 'flight']))
+console.log(longestCommonPrefix(['flower', 'flow', 'flight']));

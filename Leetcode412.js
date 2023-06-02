@@ -7,21 +7,21 @@
 // answer[i] == i (as a string) if none of the above conditions are true.
 
 var fizzBuzz = function(n) {
-    let res = []
+    let res = [];
 
     for (let i = 1; i <= n; i++) {
         if (i % 3 !== 0 && i % 5 !== 0) {
-            res.push(i.toString())
+            res.push(i.toString());
         } else if (i % 3 === 0 && i % 5 === 0) {
-            res.push('FizzBuzz')
+            res.push('FizzBuzz');
         } else if (i % 3 === 0) {
-            res.push('Fizz')
+            res.push('Fizz');
         } else {
-            res.push('Buzz')
-        }
-    }
+            res.push('Buzz');
+        };
+    };
 
-    return res
+    return res;
 };
 
-console.log(fizzBuzz(15))
+console.log(fizzBuzz(15));

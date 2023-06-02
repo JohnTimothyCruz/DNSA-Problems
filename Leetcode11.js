@@ -6,23 +6,23 @@
 // Notice that you may not slant the container.
 
 var maxArea = function(height) {
-    let left = 0
-    let right = height.length - 1
-    let most = 0
+    let left = 0;
+    let right = height.length - 1;
+    let most = 0;
 
     while (left < right) {
         if (most < Math.min(height[left], height[right]) * (right - left)) {
-            most = Math.min(height[left], height[right]) * (right - left)
-        }
+            most = Math.min(height[left], height[right]) * (right - left);
+        };
 
         if (height[left] > height[right]) {
-            right--
+            right--;
         } else {
-            left++
-        }
-    }
+            left++;
+        };
+    };
 
-    return most
+    return most;
 };
 
-console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));

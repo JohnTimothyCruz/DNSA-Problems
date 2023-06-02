@@ -8,14 +8,14 @@ var sortColors = function(nums) {
     for (let i = nums.length; i > 0; i--) {
         for (let j = 0; j < i; j++) {
             if (nums[j] > nums[j + 1]) {
-                let temp = nums[j]
-                nums[j] = nums[j + 1]
-                nums[j + 1] = temp
-            }
-        }
-    }
+                let temp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = temp;
+            };
+        };
+    };
 
-    return nums
+    return nums;
 };
 
-console.log(sortColors([2, 0, 2, 1, 1, 0]))
+console.log(sortColors([2, 0, 2, 1, 1, 0]));

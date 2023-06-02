@@ -4,15 +4,15 @@
 // Letters are case sensitive, so "a" is considered a different type of stone from "A".
 
 var numJewelsInStones = function(jewels, stones) {
-    let res = 0
+    let res = 0;
 
     for (const stone of stones) {
         if (jewels.includes(stone)) {
-            res++
-        }
-    }
+            res++;
+        };
+    };
 
-    return res
+    return res;
 };
 
-console.log(numJewelsInStones("aA", "aAAbbbb"))
+console.log(numJewelsInStones("aA", "aAAbbbb"));

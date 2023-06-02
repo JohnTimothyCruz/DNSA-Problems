@@ -12,10 +12,10 @@ var generate = function(numRows) {
 
         for(let j = 1; j < i; j++) {
             res[i][j] = res[i-1][j] + res[i-1][j-1];
-        }
-    }
+        };
+    };
 
     return res;
 };
 
-console.log(generate(5))
+console.log(generate(5));

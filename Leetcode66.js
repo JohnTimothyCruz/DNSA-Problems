@@ -4,18 +4,20 @@
 // Increment the large integer by one and return the resulting array of digits.
 
 var plusOne = function(digits) {
-    digits[digits.length - 1] += 1
+    digits[digits.length - 1] += 1;
+
     digits.reverse().forEach((digit, i) => {
         if (digit === 10) {
-            digits[i] = 0
+            digits[i] = 0;
             if (digits[i + 1]) {
-                digits[i + 1] += 1
+                digits[i + 1] += 1;
             } else {
-                digits[i + 1] = 1
-            }
-        }
-    })
-    return digits.reverse()
+                digits[i + 1] = 1;
+            };
+        };
+    });
+
+    return digits.reverse();
 };
 
-console.log(plusOne([1, 2, 9, 9]))
+console.log(plusOne([1, 2, 9, 9]));

@@ -5,15 +5,15 @@
 // You can return the answer in any order.
 
 var twoSum = function(nums, target) {
-    if (nums.length === 2) return [0, 1]
+    if (nums.length === 2) return [0, 1];
 
-    const visited = {}
+    const visited = {};
 
     for (let i = 0; i < nums.length; i++) {
         if (visited[target - nums[i]] !== undefined) return [visited[target - nums[i]], i];
 
-        visited[nums[i]] = i;
-    }
+        visited[nums[i]] = i;;
+    };
 };
 
-console.log(twoSum([2, 7, 11, 15], 9))
+console.log(twoSum([2, 7, 11, 15], 9));

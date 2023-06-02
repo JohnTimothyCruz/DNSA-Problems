@@ -4,22 +4,22 @@
 // The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
 
 var majorityElement = function(nums) {
-    let majority = 0
-    let count = 0
+    let majority = 0;
+    let count = 0;
 
     for (const num of nums) {
         if (count === 0) {
-            majority = num
-        }
+            majority = num;
+        };
 
         if (majority === num) {
-            count++
+            count++;
         } else {
-            count--
-        }
-    }
+            count--;
+        };
+    };
 
-    return majority
+    return majority;
 };
 
-console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]))
+console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]));

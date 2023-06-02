@@ -4,24 +4,23 @@
 // You must write an algorithm with O(log n) runtime complexity.
 
 var searchInsert = function(nums, target) {
-    let left = 0
-    let right = nums.length
-    let mid = Math.floor(nums.length / 2)
-
-    let curr = nums
+    let left = 0;
+    let right = nums.length;
+    let mid = Math.floor(nums.length / 2);
 
     while (left < right) {
         if (nums[mid] === target) {
-            return mid
+            return mid;
         } else if (nums[mid] > target) {
-            right = mid
+            right = mid;
         } else {
-            left = mid + 1
-        }
-        mid = Math.floor((left + right) / 2)
-    }
+            left = mid + 1;
+        };
 
-    return left
+        mid = Math.floor((left + right) / 2);
+    };
+
+    return left;
 };
 
-console.log(searchInsert([1, 3, 5, 6], 5))
+console.log(searchInsert([1, 3, 5, 6], 5));
