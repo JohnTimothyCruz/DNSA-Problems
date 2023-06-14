@@ -3,22 +3,23 @@
 // Given a string s, find the length of the longest substring without repeating characters.
 
 var lengthOfLongestSubstring = function(s) {
-    let subString = "";
-    let arr = [];
-    let count = 0;
+    let chars = {};
+    let left = 0;
+    let right = 0;
+    let currMax = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        if (!subString.includes(s[i])) {
-            subString += s[i];
+    while (right < s.length) {
+        if (chars[s[right]] > 0) {
+            chars[s[left]]--;
+            left++;
         } else {
-            arr.push(subString.length);
-            subString = '';
-            i = count++;
+            chars[s[right]] = 1;
+            right++;
+            currMax = Math.max(currMax, right - left);
         };
     };
 
-    arr.push(subString.length);
-    return Math.max(...arr);
+    return currMax;
 };
 
 console.log(lengthOfLongestSubstring('abcabcbb'));

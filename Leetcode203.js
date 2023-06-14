@@ -3,20 +3,20 @@
 // Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
 
 var removeElements = function(head, val) {
-    let dummy = new ListNode(null, head)
-    let prev = dummy
-    let curr = head
+    let dummy = new ListNode(null, head);
+    let prev = dummy;
+    let curr = head;
 
     while (curr) {
         if (curr.val === val) {
-            prev.next = curr.next
+            prev.next = curr.next;
         } else {
-            prev = prev.next
-        }
-        curr = curr.next
-    }
+            prev = prev.next;
+        };
+        curr = curr.next;
+    };
 
-    return dummy.next
+    return dummy.next;
 };
 
 // Making linked list here
