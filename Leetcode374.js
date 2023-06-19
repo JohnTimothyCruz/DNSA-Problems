@@ -42,4 +42,5 @@ const guess = (num) => {
     }
 }
 
+// Test here
 console.log(guessNumber(10))
