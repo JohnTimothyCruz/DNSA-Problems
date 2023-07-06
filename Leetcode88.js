@@ -22,4 +22,5 @@ let arr1 = [1, 2, 3, 0, 0, 0];
 let arr2 = [2, 5, 6];
 
 merge(arr1, 3, arr2, 3);
+
 console.log(arr1);
